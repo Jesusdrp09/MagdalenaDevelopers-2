@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* header{
+    height: min-content;
+    position: fixed;
+    display: flex;
+    align-items: center;
+}
+
+h2,h1, a{
+    color: white;
+}
+
+header h1:hover{
+    background-color: #334441;
+} */
+
+header h1{
+    position: relative;
+    width: 76%;
+    text-align: center;
+    padding: 0.84375rem 1.5625rem;
+    margin-right: .5rem;
+}
+
+header h1:hover{
+    background-color: #334441;
+}
+
+#irWeb{
+    text-decoration: none;
+    color: white;
+}
+
+/* header #logo{
+    width: 3.75rem;
+    height: 2.5rem;
+    position: absolute;
+    right: 5rem;
+    top: 0;
+} */
+
+/* header #fotoPerfil{
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    right: 1.25rem;
+} */
+
+#perfil{
+    text-align: center;
+    margin-top: 9.375rem;
+    margin-left: 4.6875rem;
+    margin-right: 3rem;
+}
+
+#perfil img{
+    width: 6.25rem;
+    height: 6.25rem;
+}
+
+#perfil button{
+    margin: 1.25rem;
+    width: 11.25rem;
+    height: 1.875rem;
+    color: black;
+    background-color: #9ada04;
+    text-align: center;
+    display: block;
+    align-self: center;
+}
+
+main{
+    display: flex;
+}
+
+.informacion{
+    width: 70vw;
+    display: block;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 1.25rem 1.25rem 1.25rem;
+    margin-top: 12.5rem;
+    margin-bottom: 4rem;
+    height: max-content;
+    padding-bottom: 2rem;
+}
+
+#informacionContacto, #informacionAcademica{
+    display: none;
+}
+
+.tituloInfo{
+    margin-top: -1.875rem;
+    margin-left: 0px;
+    margin-bottom: 1rem;
+    background-color: #1e2e2b;
+    color: white;
+}
+
+main h1, h2, label{
+    color: white;
+}
+
+#nombres{
+    width: 20rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+#apellidos{
+    width: 20rem;
+    margin-bottom: 2rem;
+}
+
+#fechaNacimiento{
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+#paisResidencia{
+    width: 15rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+#ciudadResidencia{
+    width: 15rem;
+    margin-bottom: 2rem;
+}
+
+#celular{
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+#contrasena{
+    margin-bottom: 2rem;
+}
+
+#agregarRedSocial{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50% 50% ;
+}
+
+#informacionContacto{
+    margin-top: 15rem;
+    margin-bottom: 4rem;
+}
+
+.redSocial{
+    width: 30vw;
+    margin-left : 2rem;
+    margin-top: 2rem;
+}
+
+.eliminarRedSocial{
+    margin-top: 2rem;
+}
+
+#nivelIngles{
+    margin: 2rem;
+}
+
+#agregarLenguaje{
+    margin: 2rem;
+}
+
+.nivelProgramacion{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.especializacion{
+    padding-top: 2rem;
+}
+
+#guardarCambios{
+    margin-right: 30vw;
+    margin-left: 50vw;
+    width: 20vw;
+    height: 2rem;
+    background-color: rgb(49, 190, 49);
+}
+
+
+

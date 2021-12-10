@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MagdalenaDevelopers</title>
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/estilos.css" id="estilos">
+    <link rel="stylesheet" href="vista/css/estilos.css" id="estilos">
     <link rel="stylesheet" href="" id="estilosblanco">
 </head>
 <body> 
@@ -28,11 +28,11 @@
                     <label for="noCerrarSesion">No cerrar sesión </label><input type="checkbox" value="No cerrar sesión" id="noCerrarSesion">
                 </div> -->
                 <input type="button" value="Ingresar" id="ingresarIS">
-                <h5>Aún no tienes cuenta? <a href="../html/registro.php">Registrate aquí.</a></h5>
+                <h5>Aún no tienes cuenta? <a href="vista/php/registro.php">Registrate aquí.</a></h5>
                 <hr>
                 <h5>Otros métodos de inicio de sesión.</h5>
                 <div id="loginGoogle">
-                    <img src="../img/g-normal.png" id="logoGoogle">
+                    <img src="vista/img/g-normal.png" id="logoGoogle">
                     <input type="button" value="Sign in with Google" id="signInWithGoogle">
                 </div>
             </form>
@@ -42,7 +42,7 @@
         <div id="cabecera">
             <div>
                 <input type="checkbox" id="btn-menu">
-                <label for="btn-menu" id="labelMenu"><div id="contenedorImgPerfil"><img id="imgMenu" src="../img/menu_ico.png"></div></label>
+                <label for="btn-menu" id="labelMenu"><div id="contenedorImgPerfil"><img id="imgMenu" src="vista/img/menu_ico.png"></div></label>
                 <nav id="menu-navegacion">
                     <ul>
                         <li><a href="#">Inicio</a></li>
@@ -54,21 +54,21 @@
             </div>
             <div>
                 <input type="checkbox" id="btnperfil">
-                <label for="btnperfil" id="labelPerfil"><img id="imgPerfil" src="../img/user-regular-24.png"></label>
+                <label for="btnperfil" id="labelPerfil"><img id="imgPerfil" src="vista/img/user-regular-24.png"></label>
                 <nav id="menu-perfil">
                     <ul>
-                        <li><a href="#">Mi perfil</a></li>
-                        <li id="opAdminID" style="display: none;"><a href="../php/opcionesAdmin.php">Opciones Admin</a></li>
-                        <li id="cerrarSesion"><a href="../index.html">Cerrar Sesión</a></li>
+                        <li><a href="vista/php/perfil.php">Mi perfil</a></li>
+                        <li id="opAdminID" style="display: none;"><a href="vista/php/opcionesAdmin.php">Opciones Admin</a></li>
+                        <li id="cerrarSesion">Cerrar Sesión</li>
                     </ul>
                 </nav>
             </div>
             <div id="botones-login" style="display: inline-block;">
-                <a href="../html/registro.php"><input type="button" value="Registrarse" id="registrese"></a>
+                <a href="vista/php/registro.php"><input type="button" value="Registrarse" id="registrese"></a>
                 <input type="button" value="Iniciar sesión" id="iniciar-sesion">
             </div>
         </div>
-        <img src="../img/Logo.png" alt="Logo" id="logo">
+        <img src="vista/img/Logo.png" alt="Logo" id="logo">
     </header>
     <main>
         <div id="entrada">
@@ -77,7 +77,7 @@
         </div>
         <i></i>
         <a href="#programadores" class='bx bx-down-arrow-alt bx-fade-down' id="bajar"></a>
-        <div id="programadores"> 
+        <div id="programadores">    
             <h1>Programadores</h1>
             
             <SELECT id="selCombo1" SIZE=1 > 
@@ -102,8 +102,8 @@
             </SELECT>
             <hr>
             <div id="contenedorPerfiles">
-                <div class="perfil">
-                    <img src="../img/habilidades-desarrollador-web.jpg">
+                <!-- <div class="perfil">
+                    <img src="vista/img/habilidades-desarrollador-web.jpg">
                     <div class="descripcion">
                         <h2 class="nombre">Pepito Gutierrez</h2>
                         <p class="lenguajes"><b>Lenguajes:</b> HTML, CSS y Javascript.</p>
@@ -111,7 +111,7 @@
                     </div>
                 </div>
                 <div class="perfil">
-                    <img src="../img/habilidades-desarrollador-web.jpg">
+                    <img src="vista/img/habilidades-desarrollador-web.jpg">
                     <div class="descripcion">
                         <h2 class="nombre">Alfonso Velasquez</h2>
                         <p class="lenguajes"><b>Lenguajes:</b> PHP, Python, .</p>
@@ -119,15 +119,15 @@
                     </div>
                 </div>
                 <div class="perfil">
-                    <img src="../img/habilidades-desarrollador-web.jpg">
+                    <img src="vista/img/habilidades-desarrollador-web.jpg">
                     <div class="descripcion">
                         <h2 class="nombre">Jesus Rios</h2>
                         <p class="lenguajes"><b>Lenguajes:</b> Html, css y javascript.</p>
                         <p class="description"><b>Descripcion:</b> Soy estudiante de ingenieria con amplios conocimientos en desarrollo de software y manejo de programación web</p><br>
                     </div>
-                </div>
+                </div> -->
             </div>
-            <input type="button" value="Ver Más" class="vermas">   
+            <a href="vista/php/perfiles.php"><input type="button" value="Ver Más" class="vermas"></a>
         </div>
         <hr>
         <div id="elMundoHoySection">
@@ -136,22 +136,22 @@
             <br>
             <div id="contenedorNoticias">
                 <div class="card">
-                    <img src="../img/habilidades-desarrollador-web.jpg" width="200px" height="150px">
+                    <img src="vista/img/habilidades-desarrollador-web.jpg" width="200px" height="150px">
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi deleniti tempore labore ipsam libero error architecto officia ratione, iusto voluptates incidunt minus magnam quibusdam optio enim odio. Nam, optio ipsum.</p>
                     <a href="#"><h5>Saber más...</h5></a>
                 </div>
                 <div class="card">
-                    <img src="../img/habilidades-desarrollador-web.jpg" width="200px" height="150px">
+                    <img src="vista/img/habilidades-desarrollador-web.jpg" width="200px" height="150px">
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi deleniti tempore labore ipsam libero error architecto officia ratione, iusto voluptates incidunt minus magnam quibusdam optio enim odio. Nam, optio ipsum.</p>
                     <a href="#"><h5>Saber más...</h5></a>
                 </div>
                 <div class="card">
-                    <img src="../img/habilidades-desarrollador-web.jpg" width="200px" height="150px">
+                    <img src="vista/img/habilidades-desarrollador-web.jpg" width="200px" height="150px">
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi deleniti tempore labore ipsam libero error architecto officia ratione, iusto voluptates incidunt minus magnam quibusdam optio enim odio. Nam, optio ipsum.</p>
                     <a href="#"><h5>Saber más...</h5></a>
                 </div>
                 <div class="card">
-                    <img src="../img/habilidades-desarrollador-web.jpg" width="200px" height="150px">
+                    <img src="vista/img/habilidades-desarrollador-web.jpg" width="200px" height="150px">
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi deleniti tempore labore ipsam libero error architecto officia ratione, iusto voluptates incidunt minus magnam quibusdam optio enim odio. Nam, optio ipsum.</p>
                     <a href="#"><h5>Saber más...</h5></a>
                 </div>
@@ -206,6 +206,6 @@
     </div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="../js/codigo.js"></script>
-<script type="module" src="../js/login.js"></script>
+<script type="module" src="vista/js/codigo.js"></script>
+<script type="module" src="vista/js/login.js"></script>
 </html>

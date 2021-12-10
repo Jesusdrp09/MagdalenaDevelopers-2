@@ -337,7 +337,7 @@ function ingresarDatosUsuario(arrayPersonal,uidUser) {
     set(ref(database, 'datosUsuarios/' + uidUser), {
       fechaNacimiento: arrayPersonal[2].value,
       tipoDocumentoIdentidad: arrayPersonal[3].value,
-      documentoIdentidad: arrayPersonal[4],
+      documentoIdentidad: arrayPersonal[4].value,
       residencia: arrayPersonal[7].value+", "+arrayPersonal[6].value+", "+arrayPersonal[5].value,
       celular: "+57"+arrayPersonal[8].value,
       telefono: arrayPersonal[9].value,
@@ -345,7 +345,11 @@ function ingresarDatosUsuario(arrayPersonal,uidUser) {
       nivelIngles: arrayPersonal[14].value,
       nivelProgramacion: arrayPersonal[15].value,
       uid: uidUser,
-      nombreCompleto: arrayPersonal[0].value+" "+arrayPersonal[1].value
+      nombreCompleto: arrayPersonal[0].value+" "+arrayPersonal[1].value,
+      paisResidencia: arrayPersonal[5].value,
+      ciudadResidencia: arrayPersonal[6].value,
+      email: arrayPersonal[10].value,
+      constrasena: arrayPersonal[11].value
     }).then(() =>{
         setTimeout(window.history.go(-1), 4000);
         }

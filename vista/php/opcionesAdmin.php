@@ -29,7 +29,7 @@
                     <label for="noCerrarSesion">No cerrar sesión </label><input type="checkbox" value="No cerrar sesión" id="noCerrarSesion">
                 </div> -->
                 <input type="button" value="Ingresar" id="ingresarIS">
-                <h5>Aún no tienes cuenta? <a href="../php/registro.php">Registrate aquí.</a></h5>
+                <h5>Aún no tienes cuenta? <a href="registro.php">Registrate aquí.</a></h5>
                 <hr>
                 <h5>Otros métodos de inicio de sesión.</h5>
                 <div id="loginGoogle">
@@ -46,10 +46,10 @@
                 <label for="btn-menu" id="labelMenu"><div id="contenedorImgPerfil"><img id="imgMenu" src="../img/menu_ico.png"></div></label>
                 <nav id="menu-navegacion">
                     <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#programadores">Programadores</a></li>
-                        <li><a href="#elMundoHoySection">El mundo hoy</a></li>
-                        <li><a href="#footer">Contactenos</a></li>
+                        <li><a href="../../index.php#">Inicio</a></li>
+                        <li><a href="../../index.php#programadores">Programadores</a></li>
+                        <li><a href="../../index.php#elMundoHoySection">El mundo hoy</a></li>
+                        <li><a href="../../index.php#footer">Contactenos</a></li>
                     </ul>
                 </nav>
             </div>
@@ -58,14 +58,14 @@
                 <label for="btnperfil" id="labelPerfil"><img id="imgPerfil" src="../img/user-regular-24.png"></label>
                 <nav id="menu-perfil">
                     <ul>
-                        <li><a href="#">Mi perfil</a></li>
-                        <li id="opAdminID" style="display: none;"><a href="../php/opcionesAdmin.php">Opciones Admin</a></li>
-                        <li id="cerrarSesion"><a href="../index.php">Cerrar Sesión</a></li>
+                        <li><a href="perfil.php">Mi perfil</a></li>
+                        <li id="opAdminID" style="display: none;"><a href="opcionesAdmin.php">Opciones Admin</a></li>
+                        <li id="cerrarSesion">Cerrar Sesión</li>
                     </ul>
                 </nav>
             </div>
             <div id="botones-login" style="display: inline-block;">
-                <a href="../php/registro.php"><input type="button" value="Registrarse" id="registrese"></a>
+                <a href="registro.php"><input type="button" value="Registrarse" id="registrese"></a>
                 <input type="button" value="Iniciar sesión" id="iniciar-sesion">
             </div>
         </div>
@@ -73,7 +73,7 @@
     </header>
     <main>
         <div id="contenedorPerfiles">
-            <div class="datosPerfil" style="display: none;">
+            <!-- <div class="datosPerfil" style="display: none;">
                 <div class="perfil">
                     <img src="../img/habilidades-desarrollador-web.jpg">
                     <div class="descripcion">
@@ -88,7 +88,7 @@
                     <div class="campoDescripcion"><label for="descripcionDB">Descripción:<input type="text" value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, sequi numquam? Totam rem tempora, ipsam corrupti ad qui modi non!" id="descripcionDB"></label></div>
                     <input class="guardarcambiosbtn" type="button" value="Guardar cambios">
                 </div>
-            </div>
+            </div> -->
         </div>
     </main>
 </body>
@@ -137,9 +137,7 @@
 
     </div>
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="../js/jquery-3.6.0.min.js"></script>
-<script src="../js/codigo.js"></script>
-<script type="module" src="../js/login.js"></script>
+<script type="module" src="../js/loginOpAdmin.js"></script>
 <script type="module" src="../js/opAdmin.js"></script>
 </html>

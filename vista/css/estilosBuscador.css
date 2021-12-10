@@ -1,0 +1,40 @@
+#buscador{
+    position: relative;
+    display: flex;
+    width: 100%;
+    grid-template-columns: 75% 25%;
+    top: 4.1rem;
+    align-items: stretch;
+    justify-content: center;
+}
+
+#inputNombreABuscar{
+    width: 20rem;
+    margin-right: .5rem;
+    background-color: transparent;
+    font-size: 1rem;
+    color: white;
+    border-top: .1rem solid white;
+    border-left: .1rem solid white;
+    border-right: .1rem solid white;
+    border-bottom: .1rem solid #9ada04;
+}
+
+#btnBuscar{
+    font-size: 1rem;
+    background-color: transparent;
+    border: 2px solid #9ada04;
+    border-style: groove; 
+    border-radius: 5px; 
+    text-align: center; 
+    vertical-align: middle;
+    padding: .3rem;
+    margin-left: .3rem;
+    color: white;
+}
+
+#btnBuscar:hover{
+    background-image: linear-gradient(to right, #c8ff2f 0%, #9ada04 100%);
+    color: black;
+    cursor: pointer;
+}
