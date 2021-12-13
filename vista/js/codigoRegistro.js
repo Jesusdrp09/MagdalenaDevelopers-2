@@ -195,7 +195,7 @@ btnRegistrar.onclick = () =>{
                                                                     console.log(arrayPersonal[16].value);
                                                                     if(validacionUrlOpcional(arrayPersonal[16].value)){ //Validacion repositorio
                                                                         arrayPersonal[16].setAttribute("style", "border-color: rgb(0, 0, 0);");
-                                                                        for (let i = 0; i < redesSociales.length; i++) {
+                                                                        for (let i = 0; i < tipoLenguaje.length; i++) {
                                                                             if(!validacionOpciones(tipoLenguaje[i].value)){ //Validación tipo de lenguaje
                                                                                 tipoLenguaje[i].setAttribute("style", "border-color: rgb(156, 0, 0);");
                                                                                 alert("Lenguaje inválido: seleccione un tipo de lenguaje");
@@ -340,11 +340,27 @@ function crearUsuario(arrayPersonal) {
 
 const tiposLenguaje = ()=>{
     let lenguajes = document.getElementsByClassName("tipoLenguaje");
-    let stringLenguajes;
-    for(let i = 1; i < lenguajes.length; i++){
-        stringLenguajes += lenguajes[i].value + " ";
+    let arrayLenguajes = [];
+    let a = "";
+    for(let i = 0; i < lenguajes.length; i++){
+        console.log(lenguajes[i].value);
+        switch(lenguajes[i].value){
+            case "2":
+                a = "PHP";
+            break;
+            case "3":
+                a = "Javascript";
+            break;
+            case "4":
+                a = "Python";
+            break;
+            default:
+                a = "";
+            break;
+        }
+        arrayLenguajes[i] = a;
     }
-    return stringLenguajes;
+    return arrayLenguajes;
 }
 
 function ingresarDatosUsuario(arrayPersonal,uidUser) {
@@ -360,6 +376,7 @@ function ingresarDatosUsuario(arrayPersonal,uidUser) {
       nivelIngles: arrayPersonal[14].value,
       nivelProgramacion: arrayPersonal[15].value,
       uid: uidUser,
+      rol: 1,
       nombreCompleto: arrayPersonal[0].value+" "+arrayPersonal[1].value,
       paisResidencia: arrayPersonal[5].value,
       ciudadResidencia: arrayPersonal[6].value,

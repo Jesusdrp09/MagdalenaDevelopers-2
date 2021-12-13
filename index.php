@@ -80,26 +80,28 @@
         <div id="programadores">    
             <h1>Programadores</h1>
             
-            <SELECT id="selCombo1" SIZE=1 > 
-                <OPTION VALUE="1">Años De Experiencia</OPTION>
-                <OPTION VALUE="2">1-2 años</OPTION>
-                <OPTION VALUE="3">2-5 años</OPTION>
-                <OPTION VALUE="4">5 años o mas</OPTION> 
-            </SELECT>
+            <select id="lenguaje" form="formularioRegistro" name="lenguajes" size="1" class="inputAcademico">
+                <OPTION VALUE="1">LENGUAJES</OPTION>
+                <OPTION VALUE="PHP">PHP</OPTION>
+                <OPTION VALUE="Javascript">Javascript</OPTION>
+                <OPTION VALUE="Python">Python</OPTION> 
+            </select>
     
-            <SELECT id="selCombo2" SIZE=1 > 
-                <OPTION VALUE="1">Tipo de desarrollo</OPTION>
-                <OPTION VALUE="2">Programación estructurada</OPTION>
-                <OPTION VALUE="3">Programación orientada a objetos</OPTION>
-                <OPTION VALUE="4">Programación modular</OPTION> 
-            </SELECT>
+            <select id="tipoProgramador" form="formularioRegistro" name="tipoProgramador" size="1" class="inputAcademico">
+                <option VALUE="1">TIPO DE PROGRAMADOR</option>
+                <option VALUE="2">FRONT-END</option>
+                <option VALUE="3">BACK-END</option>
+                <option VALUE="4">FULL STACK</option>
+            </select>
                     
-            <SELECT id="selCombo3" SIZE=1 > 
-                <OPTION VALUE="1">Lenguajes</OPTION>
-                <OPTION VALUE="2">Java</OPTION>
-                <OPTION VALUE="3">JavaScript</OPTION>
-                <OPTION VALUE="4">C#</OPTION> 
-            </SELECT>
+            <select id="nivelIngles" form="formularioRegistro" name="nivelIngles" size="1" class="inputAcademico">
+                <option VALUE="1">NIVEL DE INGLÉS</option>
+                <option VALUE="2">PRINCIPIANTE</option>
+                <option VALUE="3">BÁSICO</option>
+                <option VALUE="4">INTERMEDIO</option>
+                <option VALUE="5">SUPERIOR</option>
+            </select>
+            
             <hr>
             <div id="contenedorPerfiles">
                 <!-- <div class="perfil">
@@ -207,5 +209,5 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="module" src="vista/js/codigo.js"></script>
-<script type="module" src="vista/js/login.js"></script>
+<script type="module" src="vista/js/loginIndex.js"></script>
 </html>

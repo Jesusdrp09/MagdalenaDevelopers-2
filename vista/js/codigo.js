@@ -18,16 +18,51 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const dbRef = ref(database);
 
-function obtenerInfo(){
+function obtenerInfoPorFiltros(leng, tipoProg, nivelIng){
     let data;
     let arrayUsers;
+    console.log(leng+" "+tipoProg+" "+nivelIng);
     get(child(dbRef, 'datosUsuarios/')).then((snapshot) => {
         if (snapshot.exists()) {
           data = snapshot.val();
           arrayUsers = Object.values(data);
           let limite = 3;
+          let flag1 = true;
+          let flag2 = true;
+          let flag3 = true;
           for(let i = 0; i < limite; i++){
-            if(arrayUsers[i].rol != 2){
+
+            if(leng == 1){
+              flag1 = true;
+            }else{
+              if(arrayUsers[i].lenguajes.includes(leng)){
+                flag1 = true;
+              }else{
+                flag1 = false;
+              }
+            }
+
+            if(tipoProg == 1){
+              flag2 = true;
+            }else{
+              if(tipoProg == arrayUsers[i].nivelProgramacion){
+                flag2 = true;
+              }else{
+                flag2 = false;
+              }
+            }
+
+            if(nivelIng == 1){
+              flag3 = true;
+            }else{
+              if(nivelIng == arrayUsers[i].nivelIngles){
+                flag3 = true;
+              }else{
+                flag3 = false;
+              }
+            }
+
+            if(arrayUsers[i].rol != 2 && flag1 && flag2 && flag3){
               $("<div></div>", {"class": "datosPerfil", "id":"datosperfil"+i}).appendTo("#contenedorPerfiles");
               
               $("<div></div>", {"class": "perfil", "id":"perfil"+i}).appendTo("#datosperfil"+i);
@@ -129,4 +164,25 @@ window.addEventListener("click", e =>{
   }
 });
 
-obtenerInfo();
+let combo1 = document.getElementById("lenguaje");
+let combo2 = document.getElementById("tipoProgramador");
+let combo3 = document.getElementById("nivelIngles");
+
+combo1.onchange = () =>{
+  filtrar();
+}
+
+combo2.onchange = () =>{
+  filtrar();
+}
+
+combo3.onchange = () =>{
+  filtrar();
+}
+
+obtenerInfoPorFiltros(combo1.value,combo2.value,combo3.value);
+
+function filtrar(){
+  $("#contenedorPerfiles").empty();
+  obtenerInfoPorFiltros(combo1.value,combo2.value,combo3.value);
+}
