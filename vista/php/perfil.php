@@ -61,7 +61,7 @@
     <main>
         <div id="perfil">
             <img src="../img/user-regular-24.png" id="imagenPerfil" alt="imgPerfil">
-            <h1 id="nombrePerfil">Nombre</h1>
+            <h2 id="nombrePerfil">Nombre</h2>
             <button id="infoPersonal">Información personal</button>
             <button id="infoContacto">Información de contacto</button>
             <button id="infoAcademica">Información academica</button>
@@ -128,6 +128,7 @@
             <label for="enlaceRepositorio" id="labelRepositorio">ENLACE DE REPOSITORIO (OPCIONAL)</label>
             <input type="text" id="enlaceRepositorio" name="repositorio">
             <br>
+            <textarea name="descripcion" id="descripcion" cols="85" rows="10"></textarea><br>
             <label for="Agregar lenguaje" id="labelLenguaje">AGREGAR LENGUAJE DE PROGRAMACIÓN</label>
             <input type="button" value="+" onsubmit="volver()" id="agregarLenguaje" class="agregar">
         </div>

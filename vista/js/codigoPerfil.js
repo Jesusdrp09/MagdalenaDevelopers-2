@@ -129,6 +129,7 @@ function replaceData(uid) {
         get(child(dbRef, 'datosUsuarios/'+uid)).then((snapshot) => {
             if(snapshot.exists()){
                 data = snapshot.val();
+                console.log(data);
                 if(auth.currentUser.photoURL != null){
                     $("#imagenPerfil").attr("src", auth.currentUser.photoURL)
                 }
@@ -170,6 +171,7 @@ function replaceData(uid) {
                 $("#nivelIngles").val(data.nivelIngles);
                 $("#nivelEstudio").val(data.nivelEstudio);
                 $("#enlaceRepositorio").attr("value", data.enlaceRepositorio);
+                $("#descripcion").attr("value", data.descripcion);
             }
         });
     }
