@@ -113,8 +113,6 @@ body{
     border-radius: 0.3rem;
     background-color: #1e2e2b;
     font-weight: bolder;
-    margin-left: 42%;
-    margin-right: 42%;
 }
 
 #labelRepositorio{
@@ -141,4 +139,23 @@ body{
 .agregarLenguajeProgramacion select{
     position: relative;
     top: -1rem;
+}
+
+#descripcion{
+    width: max-content;
+    border: 2px solid black;
+}
+
+#botonesFinal{
+    display: flex;
+    text-align: center;
+}
+
+#btnVolver{
+    background-color: red;
+    color: white;
+    padding: .5rem;
+    border-radius: 0.3rem;
+    margin-right: 2rem;
+    font-weight: bolder;
 }

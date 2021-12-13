@@ -75,10 +75,14 @@
             <label for="enlaceRepositorio" id="labelRepositorio">ENLACE DE REPOSITORIO (OPCIONAL)</label>
             <input type="text" id="enlaceRepositorio" form="formularioRegistro" name="repositorio">
             <br>
+            <textarea name="descripcion" id="descripcion" cols="85" rows="10" placeholder="Escribe una breve descripción de ti..."></textarea>
             <label for="Agregar lenguaje" id="labelLenguaje">AGREGAR LENGUAJE DE PROGRAMACIÓN</label>
             <input type="button" value="+" onsubmit="volver()" form="formularioRegistro" id="agregarLenguaje" class="agregar">
         </div>
-        <input type="button" id="btnRegistrar" value="REGISTRARSE" form="formularioRegistro">
+        <div id="botonesFinal">
+            <input type="button" id="btnVolver" value="VOLVER">
+            <input type="button" id="btnRegistrar" value="REGISTRARSE" form="formularioRegistro">
+        </div>
     </div>
 </body>
 <script type="module" src="../js/codigoRegistro.js"></script>

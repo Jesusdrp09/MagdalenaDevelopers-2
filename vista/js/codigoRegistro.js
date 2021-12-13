@@ -27,8 +27,13 @@ var agregarRedSocial = document.getElementById("agregarRedSocial");
 var divRedSocial = document.createElement("div");
 var agregarLenguaje = document.getElementById("agregarLenguaje");
 var divLenguajeProgramacion = document.createElement("div");
+var btnVolver = document.getElementById("btnVolver");
 divLenguajeProgramacion.classList.add("agregarLenguajeProgramacion")
 divRedSocial.classList.add("redesSociales");
+
+btnVolver.onclick = ()=>{
+    window.location.assign("../../index.php");
+}
 
 agregarLenguaje.onclick = ()=>{
     let select1 = document.createElement("select");
@@ -333,7 +338,17 @@ function crearUsuario(arrayPersonal) {
     });
 }
 
+const tiposLenguaje = ()=>{
+    let lenguajes = document.getElementsByClassName("tipoLenguaje");
+    let stringLenguajes;
+    for(let i = 1; i < lenguajes.length; i++){
+        stringLenguajes += lenguajes[i].value + " ";
+    }
+    return stringLenguajes;
+}
+
 function ingresarDatosUsuario(arrayPersonal,uidUser) {
+    let lenguajes = tiposLenguaje();
     set(ref(database, 'datosUsuarios/' + uidUser), {
       fechaNacimiento: arrayPersonal[2].value,
       tipoDocumentoIdentidad: arrayPersonal[3].value,
@@ -349,9 +364,11 @@ function ingresarDatosUsuario(arrayPersonal,uidUser) {
       paisResidencia: arrayPersonal[5].value,
       ciudadResidencia: arrayPersonal[6].value,
       email: arrayPersonal[10].value,
-      constrasena: arrayPersonal[11].value
+      contrasena: arrayPersonal[11].value,
+      descripcion: arrayPersonal[17].value,
+      lenguajes: lenguajes
     }).then(() =>{
-        setTimeout(window.history.go(-1), 4000);
+        setTimeout(window.location.assign("../../index.php"), 2000);
         }
     );
     return 0;
@@ -377,7 +394,8 @@ const declaracionVariablesPersonal = ()=>{
         let nivelIngles = document.getElementById("nivelIngles");
         let tipoProgramador = document.getElementById("tipoProgramador");
         let repositorio = document.getElementById("enlaceRepositorio");
-        return [nombre, apellido, fechaNacimiento, tipoDocumento, documentoIdentidad, paisResidencia, ciudadResidencia, direccionResidencia, celular, telefono, email, contrasena, confirmarContrasena, nivelEstudio, nivelIngles, tipoProgramador, repositorio];
+        let descripcion = document.getElementById("descripcion");
+        return [nombre, apellido, fechaNacimiento, tipoDocumento, documentoIdentidad, paisResidencia, ciudadResidencia, direccionResidencia, celular, telefono, email, contrasena, confirmarContrasena, nivelEstudio, nivelIngles, tipoProgramador, repositorio, descripcion];
     } catch (e) {
         if(e instanceof TypeError){
             console.log("error de valor nulo");
