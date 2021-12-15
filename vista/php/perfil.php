@@ -46,7 +46,7 @@
                 <nav id="menu-perfil">
                     <ul>
                         <li><a href="perfil.php">Mi perfil</a></li>
-                        <li id="opAdminID" style="display: none;"><a href="vista/php/opcionesAdmin.php">Opciones Admin</a></li>
+                        <li id="opAdminID" style="display: none;"><a href="opcionesAdmin.php">Opciones Admin</a></li>
                         <li id="cerrarSesion">Cerrar Sesión</li>
                     </ul>
                 </nav>
