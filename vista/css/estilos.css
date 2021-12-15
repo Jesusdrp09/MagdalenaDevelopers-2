@@ -753,3 +753,7 @@ footer{
   background-color: #9ada04;
   border-radius: 5px; 
 }
+
+.imgInput{
+  display: none;
+}

@@ -11,7 +11,19 @@
     <link rel="stylesheet" href="../css/estilosBuscador.css">
     <link rel="stylesheet" href="" id="estilosblanco">
 </head>
-<body> 
+<body>
+    <div id="cambioContraDialog" style="display: none;">
+        <div id="cambioContra">
+            <h2>RECUPERAR CONTRASEÑA</h2>
+            <hr>
+            <div class="campoInicioSesion" id="email">
+                <label for="emailInput">Correo electronico:</label>
+                <input type="text" id="emailInputCambioContra">
+            </div>
+            <input type="button" value="Enviar" id="enviarCambioContra">
+            <input type="button" value="Cancelar" id="cancelarCambioContra">
+        </div>
+    </div>
     <div id="inicioSesionDialog" style="display: none;">
         <div id="iniciarSesion">
             <form action="https://practica-228ed-default-rtdb.firebaseio.com/usuariosRegistrado.json" method="GET" target="_blank" id="formIniciarSesion"></form>

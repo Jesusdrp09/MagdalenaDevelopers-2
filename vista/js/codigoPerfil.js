@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js";
 // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-analytics.js";
-import { getDatabase, set, get, onValue, ref, child } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-database.js";
+import { getDatabase, set, get, onValue, ref, child } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-database.js"
 import { getAuth, signInWithEmailAndPassword, updatePassword, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup } from 'https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -27,6 +27,60 @@ const dbRef = ref(database);
 
 
 let i = 0;
+
+let logo = document.getElementById("logo");
+let iniciarSesion = document.getElementById("iniciar-sesion");
+const cambioContraDialog = document.getElementById("cambioContraDialog");
+let olvideContra = document.getElementById("olvideMiContra");
+
+$(document).ready(function() {
+  $('a[href^="#"]').click(function() {
+    var destino = $(this.hash); //this.hash lee el atributo href de este
+    $('html, body').animate({ scrollTop: destino.offset().top - 64}, 700); //Llega a su destino con el tiempo deseado
+    return false;
+  });
+});
+
+logo.onclick = ()=>{
+  let estilos = document.getElementById("estilosblanco");
+  if(estilos.getAttribute("href") == "vista/css/estilosblanco.css"){
+    estilos.setAttribute("href", "");
+  }else{
+    estilos.setAttribute("href", "vista/css/estilosblanco.css");
+  }
+}
+
+olvideContra.onclick = () => {
+  cambioContraDialog.setAttribute("style","display: block;");
+}
+
+iniciarSesion.onclick = ()=>{
+  let dialog = document.getElementById("inicioSesionDialog");
+  let estilo = dialog.getAttribute("style");
+  if(estilo.toString() == "display: none;"){
+    dialog.setAttribute("style","display: fixed;")
+  }else{
+    dialog.setAttribute("style","display: none;")
+  }
+}
+
+window.addEventListener("click", e =>{
+  let iniciarSesionDialog = document.getElementById("inicioSesionDialog");
+  let estilo = iniciarSesionDialog.getAttribute("style");
+  let iniciarSesionCard = document.getElementById("iniciarSesion");
+  let childs = true;
+  let iniciarSesionCardChilds = iniciarSesionCard.children;
+
+  for(let i = 0; i < iniciarSesionCardChilds.length;i++){
+    if(e.target == iniciarSesionCardChilds[i]){
+      childs = childs && false;
+    }
+  }
+
+  if(estilo == "display: fixed;" && e.target == iniciarSesionDialog && (!childs || e.target != iniciarSesionCard)){
+    iniciarSesionDialog.setAttribute("style","display: none;");
+  }
+});
 
 $(document).ready(function() {
 
