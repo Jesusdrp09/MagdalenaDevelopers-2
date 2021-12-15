@@ -362,7 +362,10 @@ main{
 .descripcion{
   padding: 2% 3%;
   height: fit-content;
-  align-items: center;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 
 .nombre{
@@ -603,7 +606,7 @@ footer{
 }
 
 #iniciarSesion #pass{
-  margin: .5% 0% 4% 0%;
+  margin: .5% 0% .5% 0%;
 }
 
 #iniciarSesion input[type="text"]{
@@ -631,6 +634,14 @@ footer{
   align-items: center;
 } */
 
+#iniciarSesion #olvideMiContra{
+  align-self: flex-end;
+  margin: .5% 7.3rem 4% 0%;
+  color: #9ada04;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 #iniciarSesion #loginGoogle{
   display: flex;
   border-radius: 5px;
@@ -654,9 +665,91 @@ footer{
   cursor: pointer;
 }
 
+#cambioContraDialog{
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+#cambioContra{
+  background-color: #e0e2e2;
+  border: 2px solid #bdbdbd;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 12% 27.5% 5% 27.5%;
+  width: 45%;
+}
+
+#cambioContra h2{
+  margin-top: 2%;
+  font-size: 2.6vw;
+  color: #9ada04;
+}
+
+#cambioContra hr{
+  background-color: #9ada04;
+  width: 50%;
+  height: 4px;
+  margin: 0% 25%;
+  position: relative;
+  text-align: center;
+}
+
+#cambioContra label{
+  margin: 2% 0%;
+  font-weight: 700;
+  font-size: 1.1vw;
+}
+
+#cambioContra #emailInputCambioContra{
+  margin: 4% 0% 4% 0%;
+}
+
+#cambioContra input[type="text"]{
+  width: max-content;
+}
+
+#cambioContra #enviarCambioContra{
+  background-color: transparent;
+  border: 2px solid #9ada04;
+  border-style: groove; 
+  border-radius: 5px; 
+  text-align: center; 
+  vertical-align: middle;
+  padding: 1%;
+  width: 8rem;
+}
+
+#cambioContra #cancelarCambioContra{
+  background-color: transparent;
+  border: 2px solid #da0404;
+  border-style: groove; 
+  border-radius: 5px; 
+  text-align: center; 
+  vertical-align: middle;
+  padding: 1%;
+  margin-top: .2rem;
+  width: 8rem;
+}
+
+#cambioContra #enviarCambioContra:hover{
+  background-image: linear-gradient(to right, #c8ff2f 0%, #9ada04 100%);
+  color: black;
+}
+
+#cambioContra #cancelarCambioContra:hover{
+  background-image: linear-gradient(to right, #ff2f2f 0%, #da0404 100%);
+  color: black;
+}
+
 .verHoja{
   padding-left: 2rem;
   padding-right: 2rem;
+  align-self: flex-end;
   background-color: #9ada04;
   border-radius: 5px; 
 }
