@@ -1,3 +1,4 @@
+
 const $elementoParaConvertir = document.body;
 html2pdf()
     .set({

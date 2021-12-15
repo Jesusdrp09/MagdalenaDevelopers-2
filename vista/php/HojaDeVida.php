@@ -43,7 +43,7 @@
                         <span class="tituloD">DOCUMENTO DE IDENTIFICACIÓN</span><br>
                         <span>C.C</span><input type="radio" name="documento"  class="radio">
                         <span>C.E</span><input type="radio" name="documento"  class="radio">
-                        <span>PAS</span><input type="radio" name="documento"  class="radio">
+                        <span>T.I</span><input type="radio" name="documento"  class="radio">
                         <input type="text" name="numero" class="inputT"  id="numeroDocumento">
                     </div>
                     <div id="fechaNacimiento">
