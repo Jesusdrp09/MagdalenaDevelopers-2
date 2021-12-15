@@ -161,7 +161,7 @@ function replaceData(uid) {
                 //INFORMACION CONTACTO
                 $("#celular").attr("value", data.celular);
                 $("#telefono").attr("value", data.telefono);
-                $("#email").attr("value", data.emailInput);
+                $("#email").attr("value", data.email);
                 $("#contrasena").attr("value", data.contrasena);
                 $("#confirmarContrasena").attr("value", data.contrasena);
                 //FALTAN REDES SOCIALES
@@ -193,7 +193,7 @@ function changeDatabase(userUid){
             nombreCompleto: $("#nombres").val()+" "+$("#apellidos").val(),
             paisResidencia: $("#paisResidencia").val(),
             ciudadResidencia: $("#ciudadResidencia").val(),
-            emailInput: $("#email").val(),
+            email: $("#email").val(),
             contrasena: $("#contrasena").val(),
             lenguajes: "Lorem ipsum dolor sit amet.",
             descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem fuga quaerat vel. Unde dolores eaque reprehenderit voluptates corrupti at alias."

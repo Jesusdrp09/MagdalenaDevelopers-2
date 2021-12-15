@@ -370,7 +370,7 @@ function ingresarDatosUsuario(arrayPersonal,uidUser) {
       tipoDocumentoIdentidad: arrayPersonal[3].value,
       documentoIdentidad: arrayPersonal[4].value,
       residencia: arrayPersonal[7].value+", "+arrayPersonal[6].value+", "+arrayPersonal[5].value,
-      celular: "+57"+arrayPersonal[8].value,
+      celular: arrayPersonal[8].value,
       telefono: arrayPersonal[9].value,
       nivelEstudio: arrayPersonal[13].value,
       nivelIngles: arrayPersonal[14].value,
@@ -382,6 +382,7 @@ function ingresarDatosUsuario(arrayPersonal,uidUser) {
       ciudadResidencia: arrayPersonal[6].value,
       email: arrayPersonal[10].value,
       contrasena: arrayPersonal[11].value,
+      enlaceRepositorio: arrayPersonal[16].value,
       descripcion: arrayPersonal[17].value,
       lenguajes: lenguajes
     }).then(() =>{
@@ -616,7 +617,7 @@ function validacionUrlOpcional(opcion){
             } 
         } catch (e) {
             if(e instanceof TypeError){
-                console.log("error de valor nuloopcional");
+                console.log("error de valor nulo opcional");
             }
         }
     }
