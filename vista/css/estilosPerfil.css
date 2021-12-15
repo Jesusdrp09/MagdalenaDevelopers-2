@@ -195,7 +195,7 @@ main h1, h2, label{
     width: max-content;
     border: 2px solid black;
     margin-top: 2rem;
-    padding: 2rem;
-    font-size: 30px;
+    padding: 1rem;
+    font-size: 12px;
 }
 

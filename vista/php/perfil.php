@@ -142,7 +142,7 @@
             <label for="enlaceRepositorio" id="labelRepositorio">ENLACE DE REPOSITORIO (OPCIONAL)</label>
             <input type="text" id="enlaceRepositorio" name="repositorio">
             <br>
-            <textarea name="descripcion" id="descripcion" cols="85" rows="10"></textarea><br>
+            <textarea name="descripcion" id="descripcion" cols="50" rows="8"></textarea><br>
             <label for="Agregar lenguaje" id="labelLenguaje">AGREGAR LENGUAJE DE PROGRAMACIÓN</label>
             <input type="button" value="+" onsubmit="volver()" id="agregarLenguaje" class="agregar">
         </div>
