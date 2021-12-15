@@ -31,7 +31,6 @@ function obtenerInfoPorFiltros(leng, tipoProg, nivelIng){
           let flag2 = true;
           let flag3 = true;
           for(let i = 0; i < limite; i++){
-
             if(leng == 1){
               flag1 = true;
             }else{

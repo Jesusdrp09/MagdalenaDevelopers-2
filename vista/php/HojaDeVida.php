@@ -30,28 +30,28 @@
                 <div id="fila-1">
                     <div class="tituloD">
                         APELLIDOS <br>
-                        <input type="text" name="apellidos" class="inputT">
+                        <input type="text" name="apellidos" class="inputT" id="apellidoInput">
                     </div><br>
                     
                     <div class="tituloD">
                         NOMBRES <br>
-                        <input type="text" name="nombres" class="inputT">
+                        <input type="text" name="nombres" class="inputT" id="nombreInput">
                     </div>
                 </div>
                 <div id="fila-2">
                     <div id="documentoIDE">
                         <span class="tituloD">DOCUMENTO DE IDENTIFICACIÓN</span><br>
-                        <span>C.C</span><input type="radio" name="documento"  class="radio">
-                        <span>C.E</span><input type="radio" name="documento"  class="radio">
-                        <span>T.I</span><input type="radio" name="documento"  class="radio">
+                        <span>C.C</span><input type="radio" name="documento"  class="radio" id="ccinput">
+                        <span>C.E</span><input type="radio" name="documento"  class="radio" id="ceinput">
+                        <span>T.I</span><input type="radio" name="documento"  class="radio" id="tiinput">
                         <input type="text" name="numero" class="inputT"  id="numeroDocumento">
                     </div>
                     <div id="fechaNacimiento">
                         <span class="tituloD">FECHA NACIMIENTO</span>
                         <div id="fechaN">
-                            <span>DÍA</span><input type="number" id="dia" name="dia" max="31" min="0" >
-                            <span>MES</span><input type="number" id="mes" name="mes" max="12" min="0" >
-                            <span>AÑO</span><input type="number" id="año" name="anio" max="2021" min="0" >
+                            <span>DÍA</span><input type="number" id="dia" name="dia" max="31" min="0">
+                            <span>MES</span><input type="number" id="mes" name="mes" max="12" min="0">
+                            <span>AÑO</span><input type="number" id="anio" name="anio" max="2021" min="0">
                         </div>
                     </div>
                 </div>
@@ -63,34 +63,34 @@
                         <div>
                             <span>NIVEL DE ESTUDIO</span><br>
                             <div>
-                                <input type="text" name="nivelE" class="inputT" >
+                                <input type="text" name="nivelE" class="inputT" id="nivelEstudio" >
                             </div>
                         </div>
                         <div>
                             <span>NIVEL DE INGLÉS</span><br>
                             <div>
-                                <input type="text" name="nivelI" class="inputT">
+                                <input type="text" name="nivelI" class="inputT" id="nivelIngles">
                             </div>
                         </div>    
                         <div>
                             <span>TIPO DE PROGRAMADOR</span><br>
                             <div>
                                 <div>
-                                    <input type="text" name="tipoP" class="inputT">
+                                    <input type="text" name="tipoP" class="inputT" id="tipoProgramador">
                                 </div>
                             </div>
                         </div>
                         <div>
                             <span id="lenguajes">LENGUAJES</span> <br>
                             <div>
-                                <textarea name="lenguajes" class="inputT"></textarea>
+                                <textarea name="lenguajes" class="inputT" id="lenguajesinput"></textarea>
                             </div>
                         </div>
                     </div>
                     <div id="direccionC">
                         <span class="tituloD">DIRECCION DE CORRESPONDENCIA</span><br>
-                        <input type="text" name="direccionC" class="inputT" id="inputDireccion" ><br><br>
-                        <span>PAÍS  <input type="text" name="paisC" class="inputT" id="inputPais" ></span><br><br>
+                        <input type="text" name="direccionC" class="inputT" id="inputDireccion"><br><br>
+                        <span>PAÍS  <input type="text" name="paisC" class="inputT" id="inputPais"></span><br><br>
                         <span>MUNICIPIO <input type="text" name="municipioC" class="inputT" id="inputMunicipio" ></span><br><br>
                         <span>CELULAR <input type="number" name="celularC" class="inputT" id="inputCelular" ></span><br><br>
                         <span>TELEFONO <input type="number" name="telefonoC" class="inputT" id="inputTelefono" ></span><br><br>
@@ -108,6 +108,7 @@
     </main>
     <footer id="footer">MagdalenaDevelopers &copy; - Todos los derechos reservados</footer>
 </body>
+<script src="../js/jquery-3.6.0.min.js"></script>
 <script src="../js/html2pdf.bundle.min.js"></script>
-<script src="../js/codigopdf.js"></script>
+<script type="module" src="../js/codigopdf.js"></script>
 </html>
