@@ -171,7 +171,7 @@ function replaceData(uid) {
                 $("#nivelIngles").val(data.nivelIngles);
                 $("#nivelEstudio").val(data.nivelEstudio);
                 $("#enlaceRepositorio").attr("value", data.enlaceRepositorio);
-                $("#descripcion").attr("value", data.descripcion);
+                $("#descripcion").html(data.descripcion);
             }
         });
     }
@@ -196,7 +196,7 @@ function changeDatabase(userUid){
             email: $("#email").val(),
             contrasena: $("#contrasena").val(),
             lenguajes: "Lorem ipsum dolor sit amet.",
-            descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem fuga quaerat vel. Unde dolores eaque reprehenderit voluptates corrupti at alias."
+            descripcion: $("#descripcion").val()
         }).then(() =>{
             updatePassword(auth.currentUser, $("#contrasena").val()).then(() =>{
                 console.log("Password changed");

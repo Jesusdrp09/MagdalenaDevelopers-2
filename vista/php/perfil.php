@@ -95,7 +95,7 @@
             <label for="Telefono">TELÉFONO</label>
             <input type="number" id="telefono" pattern="[0-9]">
             <label for="Correo electronico">CORREO ELECTRÓNICO</label>
-            <input type="text" id="email" pattern="[\W\w]+"><br>
+            <input type="email" id="email"><br>
             <label for="Contraseña">CONTRASEÑA</label>
             <input type="password" id="contrasena">
             <label for="Confirmar contraseña">CONFIRMAR CONTRASEÑA</label>
