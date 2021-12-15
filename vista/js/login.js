@@ -86,7 +86,7 @@ loginGoogle.onclick = () =>{
 btnSalir.onclick = () =>{
   signOut(auth).then(() => {
     // Sign-out successful.
-    window.location.assign("../index.php#");
+    window.location.assign("../../index.php#");
   }).catch((error) => {
     // An error happened.
     console.log(error.code + " " + error.message);

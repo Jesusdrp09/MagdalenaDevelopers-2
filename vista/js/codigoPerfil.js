@@ -2,7 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js";
 // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-analytics.js";
 import { getDatabase, set, get, onValue, ref, child } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-database.js"
-import { getAuth, signInWithEmailAndPassword, updatePassword, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup } from 'https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js';
+import { getAuth, signInWithEmailAndPassword, updatePassword, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup, updateProfile } from 'https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -253,7 +253,9 @@ function changeDatabase(userUid){
             descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem fuga quaerat vel. Unde dolores eaque reprehenderit voluptates corrupti at alias."
         }).then(() =>{
             updatePassword(auth.currentUser, $("#contrasena").val()).then(() =>{
-                console.log("Password changed");
+              updateProfile(auth.currentUser, {photoURL: $("#imagenPerfil").attr("src")}).then(() =>{
+                console.log("Datos actualizados con exitos");
+              })
             }).catch((error) =>{
                 console.log(error);
             });

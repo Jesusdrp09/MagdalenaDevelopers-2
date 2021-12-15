@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-storage.js";
+import { getAuth } from 'https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js';
 
 const firebaseConfig = {
     apiKey: "AIzaSyAiWe1mOBsqvzD-AaACR7itNloHUYGe8fY",
@@ -14,13 +15,17 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const auth = getAuth();
 const storage = getStorage(app);
 
 $("#imgInput").attr("accept","image/*");
 $("#imgInput").change(function(e){
     let file = e.target.files[0];
-    let fileRef = ref(storage, file.name);
+    let fileRef = ref(storage, "profilepics/"+auth.currentUser.uid);
     uploadBytes(fileRef, file).then((snapshot) =>{
-        console.log("Photo uploaded");
+        getDownloadURL(fileRef).then((downloadURL) => {
+            console.log("Photo uploaded and the downloadURL is: "+downloadURL);
+            $("#imagenPerfil").attr("src", downloadURL);
+        });
     });
 });

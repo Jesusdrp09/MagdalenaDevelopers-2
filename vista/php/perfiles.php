@@ -41,6 +41,7 @@
                 <!-- <div id="noCerrarSesionDiv">
                     <label for="noCerrarSesion">No cerrar sesión </label><input type="checkbox" value="No cerrar sesión" id="noCerrarSesion">
                 </div> -->
+                <p id="olvideMiContra">Olvide mi contraseña</p>
                 <input type="button" value="Ingresar" id="ingresarIS">
                 <h5>Aún no tienes cuenta? <a href="registro.php">Registrate aquí.</a></h5>
                 <hr>
@@ -158,4 +159,5 @@
 <script src="../js/jquery-3.6.0.min.js"></script>
 <script type="module" src="../js/login.js"></script>
 <script type="module" src="../js/perfiles.js"></script>
+<script type="module" src="../js/loadPicture.js"></script>
 </html>
