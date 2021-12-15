@@ -653,3 +653,10 @@ footer{
 #iniciarSesion #loginGoogle #signInWithGoogle:hover, img{
   cursor: pointer;
 }
+
+.verHoja{
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: #9ada04;
+  border-radius: 5px; 
+}

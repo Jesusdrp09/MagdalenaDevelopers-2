@@ -61,10 +61,8 @@ function obtenerInfoPorFiltros(leng, tipoProg, nivelIng){
                 flag3 = false;
               }
             }
-
             if(arrayUsers[i].rol != 2 && flag1 && flag2 && flag3){
               $("<div></div>", {"class": "datosPerfil", "id":"datosperfil"+i}).appendTo("#contenedorPerfiles");
-              
               $("<div></div>", {"class": "perfil", "id":"perfil"+i}).appendTo("#datosperfil"+i);
               $("<img>", {"src": "vista/img/habilidades-desarrollador-web.jpg", "id":"imgPerfil"+i}).appendTo("#perfil"+i);
               $("<div></div>", {"class": "descripcion", "id":"descripcionperfil"+i}).appendTo("#perfil"+i);
@@ -72,6 +70,7 @@ function obtenerInfoPorFiltros(leng, tipoProg, nivelIng){
               $("#h2id"+i).text(arrayUsers[i].nombreCompleto);
               $("<p></p>", {"class": "lenguajes", "id":"lenguajeid"+i}).appendTo("#descripcionperfil"+i);
               $("<p></p>", {"class": "description", "id":"descripcionid"+i}).appendTo("#descripcionperfil"+i);
+              $(`<button class="verHoja" id="${arrayUsers[i].email}">VER HOJA DE VIDA</button>`).appendTo("#descripcionperfil"+i);
               $("#lenguajeid"+i).html("<b>Lenguajes: </b>"+arrayUsers[i].lenguajes);
               $("#descripcionid"+i).html("<b>Descripción: </b>"+arrayUsers[i].descripcion);
             }else{

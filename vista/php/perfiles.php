@@ -144,6 +144,6 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="../js/jquery-3.6.0.min.js"></script>
-<script type="module" src="../js/login.js"></script>
+<script type="module" src="../../modelo/login.js"></script>
 <script type="module" src="../js/perfiles.js"></script>
 </html>

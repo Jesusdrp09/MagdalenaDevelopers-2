@@ -1,0 +1,333 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input, textarea{
+    pointer-events:none;
+}
+
+#cabecera{
+    border: 2px solid black;
+    border-radius: 25px;
+    box-shadow: 9px 10px 5px 0 black;
+    margin: 5vw 10vw;
+    display: flex;
+    background-color: white;
+}
+
+#cabecera img{
+    height: 200px;
+    margin: 10px 50px;
+}
+
+#titulo{
+    width: 30%;
+    text-align: center;
+    margin-top: 4vw;
+    margin-left: 8vw;
+    margin-right: 5vw;
+}
+
+#titulo h1, p{
+    margin: 0;
+}
+
+#titulo h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#formato{
+    font-size: 20px;
+}
+
+#persona{
+    font-size: 18px;
+}
+
+#entidad-receptora{
+    width: 20%;
+    margin-right: 20px;
+    margin-top: 4vw;
+}
+
+#entidad-receptora p{
+    font-size: 10px;
+    font-style: italic;
+}
+
+#entidad-receptora input{
+    height: 30px;
+    width: 15.625rem;
+}
+
+#titulo-datos{
+    margin: 5vw 10vw;
+    display: flex;
+    text-align: center;
+    font-weight: bold;
+}
+
+#numero{
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    align-items: center;
+    padding-top: 5px;
+    padding-right: 2.5px;
+    padding-left: 2.5px;
+    
+}
+
+#guion{
+    color: #02a0c6;
+    font-size: 30px;
+}
+
+#tituloDatos{
+    width: 20vw;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    display: table;
+    vertical-align: middle;
+    align-self: center;
+    padding: 5px;
+}
+
+#informacion-personal{
+    margin: 5vw 10vw;
+    border: 2px solid black;
+    display: flexbox;
+    box-shadow: 9px 10px 2px 0 black;
+    background-color: #f2fafc;
+}
+
+#fila-1{
+    display: flex;
+    height: 5vw;
+}
+
+#fila-1 div{
+    width: 40vw;
+    border: .25px solid black;
+}
+
+#fila-1 input{
+    margin-top: 10px;
+    width: 18.75rem;
+}
+
+.tituloD{
+    font-size: 14px;
+    font-style: italic;
+    padding-top: 10px;
+}
+
+#fila-2{
+    display: flex;
+    font-size: 18px;
+}
+
+#fila-2 input[type="radio"]{
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+}
+
+#documentoIDE{
+    width: 40vw;
+    border: .25px solid black;
+}
+
+#fechaNacimiento{
+    width: 40vw;
+    border: .25px solid black;
+}
+
+#sexo{
+    width: 10vw;
+    border:.25px solid black;
+}
+
+#nacion{
+    display: flex;
+    width: 40vw;
+    border: .25px solid black;
+}
+
+#paisN{
+    margin-left: 5%;
+    width: 200px;
+}
+
+#paisN input{
+    width: 12rem;
+}
+
+#fila-1 > div{
+    padding-left: 10px;
+}
+
+#fila-2 > div{
+    padding-left: 10px;
+}
+
+#fila-3{
+    border: .5px solid black;
+    padding-left: 10px;
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+#fila-3 *{
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+#fila-3 input{
+    width: 20px;
+    height: 20px;
+    align-items: center;
+}
+
+#fila-3 .inputT{
+    width: 10rem;
+}
+
+#fila-4{
+    font-size: 18px;
+    display: flex;
+}
+
+#infoAca{
+    width: 40.9vw;
+    border: .5px solid black;
+}
+
+#infoAca > div{
+    margin-bottom: 20px;
+    margin-left: 10px;
+    display: flex;
+}
+
+
+#dia, #mes{
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#año{
+    width: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#direccionC{
+    width: 40vw;
+    border: .25px solid black;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#inputDireccion{
+    width: 20rem;
+}
+
+#inputPais{
+    width: 10rem;
+}
+
+#inputMunicipio{
+    width: 12rem;
+}
+
+#inputTelefono{
+    width: 8rem;
+}
+
+#inputEmail{
+    width: 20rem;
+}
+
+#inputCelular{
+    width: 10rem;
+}
+
+.inputT{
+    background-color: transparent; 
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1250px) {
+    html{
+        font-size: 10px;
+    }
+
+    #fila-2{
+        font-size: 16px;
+    }
+
+    #fila-1 input{
+        margin-top: 0;
+    }
+}
+
+#div-submit{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#submit{
+    width: 6rem;
+    height: 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 4px 5px 5px 0 black;
+}
+
+#submit:hover{
+    color: white;
+    background-color: black;
+}
+
+.radio:hover{
+    cursor: pointer;
+}
+
+#footer{
+    color: white;
+    padding: 2px 0;
+    text-align: center;
+}
+
+#numeroDocumento{
+    margin-top: -2rem;
+    margin-left: 1rem;
+    width: 12rem;
+}
+
+#lenguajes{
+    margin-bottom: 25px;
+}
+
+#descripcionTA{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+
+
+
