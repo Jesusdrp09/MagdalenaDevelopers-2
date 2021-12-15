@@ -1,0 +1,46 @@
+.NoticiasInfo{
+    width: 70vw;
+    display: block;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 1.25rem 1.25rem 1.25rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    height: max-content;
+    padding-bottom: 2rem;
+    text-align: center;
+    margin-right: 7.5vw;
+    margin-left: 12.5vw;
+}
+
+.tituloInfo{
+    margin-top: -1.875rem;
+    margin-left: 0px;
+    margin-bottom: 1rem;
+    background-color: #1e2e2b;
+    color: white;
+    text-align: center;
+}
+
+#guardarCambios{
+    margin-right: 20vw;
+    margin-left: 40vw;
+    width: 20vw;
+    height: 2rem;
+    background-color: rgb(49, 190, 49);
+    text-align: center;
+}
+#SubirImagen{
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+main h1, h2, label{
+    color: white;
+}
+#url{
+    width: 15rem;
+}
+
+textarea{
+    padding: 0.2rem;
+}
