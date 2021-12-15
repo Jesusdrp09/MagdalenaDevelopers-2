@@ -136,7 +136,6 @@
     <button id="guardarCambios">Guardar cambios</button>
 </body>
 <script src="../js/jquery-3.6.0.min.js"></script>
-<!-- <script src="../js/codigo.js"></script> -->
 <script type="module" src="../js/login.js"></script>
 <script type="module" src="../js/codigoPerfil.js"></script>
 </html>
