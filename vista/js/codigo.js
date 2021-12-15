@@ -70,12 +70,11 @@ function obtenerInfoPorFiltros(leng, tipoProg, nivelIng){
               $("#h2id"+i).text(arrayUsers[i].nombreCompleto);
               $("<p></p>", {"class": "lenguajes", "id":"lenguajeid"+i}).appendTo("#descripcionperfil"+i);
               $("<p></p>", {"class": "description", "id":"descripcionid"+i}).appendTo("#descripcionperfil"+i);
-              // $(`<button class="verHoja" id="${arrayUsers[i].email}">VER HOJA DE VIDA</button>`).appendTo("#descripcionperfil"+i);
               $("<input></input>", {"class":"verHoja", "id":"verhojaid"+i, "type":"button", "value":"VER HOJA DE VIDA"}).appendTo("#descripcionperfil"+i);
               $("#lenguajeid"+i).html("<b>Lenguajes: </b>"+arrayUsers[i].lenguajes);
               $("#descripcionid"+i).html("<b>Descripción: </b>"+arrayUsers[i].descripcion);
               $("#verhojaid"+i).click(() => {
-                window.location.assign("vista/php/HojaDeVida.php");
+                window.location.assign("vista/php/HojaDeVida.php?uid="+arrayUsers[i].uid);
               });
             }else{
               limite += 1;
