@@ -1,5 +1,7 @@
 
 const $elementoParaConvertir = document.body;
+
+
 html2pdf()
     .set({
         margin: 0,
