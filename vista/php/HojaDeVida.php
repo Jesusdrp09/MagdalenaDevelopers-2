@@ -109,5 +109,5 @@
     <footer id="footer">MagdalenaDevelopers &copy; - Todos los derechos reservados</footer>
 </body>
 <script src="../js/html2pdf.bundle.min.js"></script>
-<script src="../../modelo/codigopdf.js"></script>
+<script src="../js/codigopdf.js"></script>
 </html>
