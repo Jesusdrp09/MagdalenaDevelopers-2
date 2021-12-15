@@ -122,9 +122,11 @@ onAuthStateChanged(auth, (user) => {
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/firebase.User
     const uid = user.uid;
+    let imgPerfil = document.getElementById("imgPerfil");
     if(user.photoURL != null){
-      let imgPerfil = document.getElementById("imgPerfil");
       imgPerfil.setAttribute("src",user.photoURL);
+    }else{
+      imgPerfil.setAttribute("src","../vista/img/user-regular-24.png");
     }
     //INSTRUCCIONES
     let iniciarSesionDialog = document.getElementById("inicioSesionDialog");
