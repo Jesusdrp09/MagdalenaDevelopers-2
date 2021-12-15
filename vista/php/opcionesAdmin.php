@@ -150,6 +150,6 @@
     </div>
 </footer>
 <script src="../js/jquery-3.6.0.min.js"></script>
-<script type="module" src="../../modelo/loginOpAdmin.js"></script>
+<script type="module" src="../js/loginOpAdmin.js"></script>
 <script type="module" src="../js/opAdmin.js"></script>
 </html>
