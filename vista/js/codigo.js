@@ -87,7 +87,8 @@ function obtenerInfoPorFiltros(leng, tipoProg, nivelIng){
 
 let logo = document.getElementById("logo");
 let iniciarSesion = document.getElementById("iniciar-sesion");
-let btnIniciar = document.getElementById("ingresarIS");
+const cambioContraDialog = document.getElementById("cambioContraDialog");
+let olvideContra = document.getElementById("olvideMiContra");
 
 $(document).ready(function() {
   $('a[href^="#"]').click(function() {
@@ -106,6 +107,10 @@ logo.onclick = ()=>{
   }
 }
 
+olvideContra.onclick = () => {
+  cambioContraDialog.setAttribute("style","display: block;");
+}
+
 iniciarSesion.onclick = ()=>{
   let dialog = document.getElementById("inicioSesionDialog");
   let estilo = dialog.getAttribute("style");
@@ -114,34 +119,6 @@ iniciarSesion.onclick = ()=>{
   }else{
     dialog.setAttribute("style","display: none;")
   }
-}
-
-btnIniciar.onclick = ()=>{
-  let email = document.getElementById("emailInput").value;
-  if(validarEmail(email)){
-    newemail = '"'+email+'"';
-    document.forms["formIniciarSesion"]["emailInput"].value = newemail;
-    document.getElementById("formIniciarSesion").submit();
-    document.forms["formIniciarSesion"]["emailInput"].value = email;
-  }else{
-    alert("Inserte un correo válido");
-  }
-}
-
-function validarEmail(correo){
-  let regExCorreo = new RegExp("[A-Za-z0-9\W]+@+[a-z]+\.+[a-z]{2,3}","g");
-    let correoAdd = regExCorreo.exec(correo);
-    try {
-        if(correoAdd[0] == correo){
-            return true;
-        }else{
-            return false;
-        } 
-    } catch (e) {
-        if(e instanceof TypeError){
-            console.log("error de valor nulo");
-        }
-    }
 }
 
 window.addEventListener("click", e =>{
@@ -159,7 +136,6 @@ window.addEventListener("click", e =>{
 
   if(estilo == "display: fixed;" && e.target == iniciarSesionDialog && (!childs || e.target != iniciarSesionCard)){
     iniciarSesionDialog.setAttribute("style","display: none;");
-    console.log("cerrar");
   }
 });
 

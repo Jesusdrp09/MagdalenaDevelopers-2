@@ -32,6 +32,8 @@ provider.setCustomParameters({
 let btnIniciar = document.getElementById("ingresarIS");
 let btnSalir = document.getElementById("cerrarSesion");
 let loginGoogle = document.getElementById("loginGoogle");
+let cambioContra = document.getElementById("enviarCambioContra");
+let cancelarCambioContra = document.getElementById("cancelarCambioContra");
 
 btnIniciar.onclick = ()=>{
   let email = document.getElementById("emailInput").value;
@@ -50,11 +52,6 @@ btnIniciar.onclick = ()=>{
       console.log(errorCode);
       console.log(errorMessage);
     });
-
-    // newemail = '"'+email+'"';
-    // document.forms["formIniciarSesion"]["emailInput"].value = newemail;
-    // document.getElementById("formIniciarSesion").submit();
-    // document.forms["formIniciarSesion"]["emailInput"].value = email;
   }else{
     alert("Inserte un correo válido");
   }
@@ -94,6 +91,30 @@ btnSalir.onclick = () =>{
     // An error happened.
     console.log(error.code + " " + error.message);
   });
+}
+
+cambioContra.onclick = () => {
+  if($("#emailInputCambioContra").val() != ""){
+    console.log($("#emailInputCambioContra").val());
+    sendPasswordResetEmail(auth, $("#emailInputCambioContra").val())
+    .then(() => {
+      // Password reset email sent!
+      cambioContraDialog.setAttribute("style","display: none;");
+      alert("Se le ha enviado un correo, revise su Bandeja de Entrada o Spam");
+      // ..
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // ..
+    });
+  }else{
+    alert("Ingrese un correo");
+  }
+}
+
+cancelarCambioContra.onclick = () => {
+  cambioContraDialog.setAttribute("style","display: none;");
 }
 
 onAuthStateChanged(auth, (user) => {
