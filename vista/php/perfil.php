@@ -45,7 +45,7 @@
                 <label for="btnperfil" id="labelPerfil"><img id="imgPerfil" src="../img/user-regular-24.png"></label>
                 <nav id="menu-perfil">
                     <ul>
-                        <li><a href="vista/php/perfil.php">Mi perfil</a></li>
+                        <li><a href="perfil.php">Mi perfil</a></li>
                         <li id="opAdminID" style="display: none;"><a href="vista/php/opcionesAdmin.php">Opciones Admin</a></li>
                         <li id="cerrarSesion">Cerrar Sesión</li>
                     </ul>
@@ -136,7 +136,6 @@
     <button id="guardarCambios">Guardar cambios</button>
 </body>
 <script src="../js/jquery-3.6.0.min.js"></script>
-<!-- <script src="../js/codigo.js"></script> -->
-<script type="module" src="../../modelo/login.js"></script>
+<script type="module" src="../js/login.js"></script>
 <script type="module" src="../js/codigoPerfil.js"></script>
 </html>
