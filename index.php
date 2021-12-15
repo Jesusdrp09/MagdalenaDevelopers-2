@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="" id="estilosblanco">
 </head>
 <body> 
+    <div id="cambioContraDialog" style="display: none;">
+        <div id="cambioContra">
+            <h2>RECUPERAR CONTRASEÑA</h2>
+            <hr>
+            <div class="campoInicioSesion" id="email">
+                <label for="emailInput">Correo electronico:</label>
+                <input type="text" id="emailInputCambioContra">
+            </div>
+            <input type="button" value="Enviar" id="enviarCambioContra">
+            <input type="button" value="Cancelar" id="cancelarCambioContra">
+        </div>
+    </div>
     <div id="inicioSesionDialog" style="display: none;">
         <div id="iniciarSesion">
             <form action="https://practica-228ed-default-rtdb.firebaseio.com/usuariosRegistrado.json" method="GET" target="_blank" id="formIniciarSesion"></form>
@@ -27,6 +39,7 @@
                 <!-- <div id="noCerrarSesionDiv">
                     <label for="noCerrarSesion">No cerrar sesión </label><input type="checkbox" value="No cerrar sesión" id="noCerrarSesion">
                 </div> -->
+                <p id="olvideMiContra">Olvide mi contraseña</p>
                 <input type="button" value="Ingresar" id="ingresarIS">
                 <h5>Aún no tienes cuenta? <a href="vista/php/registro.php">Registrate aquí.</a></h5>
                 <hr>
