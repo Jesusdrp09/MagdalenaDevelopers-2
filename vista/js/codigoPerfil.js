@@ -215,7 +215,7 @@ function replaceData(uid) {
                 //INFORMACION CONTACTO
                 $("#celular").attr("value", data.celular);
                 $("#telefono").attr("value", data.telefono);
-                $("#email").attr("value", data.email);
+                $("#emailLabel").html(data.email);
                 $("#contrasena").attr("value", data.contrasena);
                 $("#confirmarContrasena").attr("value", data.contrasena);
                 //FALTAN REDES SOCIALES
@@ -247,7 +247,7 @@ function changeDatabase(userUid){
             nombreCompleto: $("#nombres").val()+" "+$("#apellidos").val(),
             paisResidencia: $("#paisResidencia").val(),
             ciudadResidencia: $("#ciudadResidencia").val(),
-            email: $("#email").val(),
+            email: $("#emailLabel").html(),
             contrasena: $("#contrasena").val(),
             lenguajes: "Lorem ipsum dolor sit amet.",
             descripcion: $("#descripcion").val()

@@ -107,16 +107,15 @@
             <label for="Celular">CELULAR</label>
             <input type="number" id="celular" pattern="[0-9]{10}">
             <label for="Telefono">TELÉFONO</label>
-            <input type="number" id="telefono" pattern="[0-9]">
-            <label for="Correo electronico">CORREO ELECTRÓNICO</label>
-            <input type="email" id="email"><br>
+            <input type="number" id="telefono" pattern="[0-9]"><br>
             <label for="Contraseña">CONTRASEÑA</label>
             <input type="password" id="contrasena">
             <label for="Confirmar contraseña">CONFIRMAR CONTRASEÑA</label>
             <input type="password" id="confirmarContrasena"><br>
             <label for="red social">AGREGAR RED SOCIAL</label>
-            <input type="button" value="+" id="agregarRedSocial" class="agregar" pattern="[A-Za-z]">
-        </div>
+            <input type="button" value="+" id="agregarRedSocial" class="agregar" pattern="[A-Za-z]"><br><br>
+            <label for="correoElectronico" id="emailLabel"></label>
+        </div>q
         <div id="informacionAcademica" class="informacion">
             <h2 class="tituloInfo">Información Académica</h2>
             <select id="nivelEstudio"  name="nivelEstudio" size="1" class="inputAcademico">
@@ -142,7 +141,7 @@
             <label for="enlaceRepositorio" id="labelRepositorio">ENLACE DE REPOSITORIO (OPCIONAL)</label>
             <input type="text" id="enlaceRepositorio" name="repositorio">
             <br>
-            <textarea name="descripcion" id="descripcion" cols="85" rows="10"></textarea><br>
+            <textarea name="descripcion" id="descripcion" cols="50" rows="8"></textarea><br>
             <label for="Agregar lenguaje" id="labelLenguaje">AGREGAR LENGUAJE DE PROGRAMACIÓN</label>
             <input type="button" value="+" onsubmit="volver()" id="agregarLenguaje" class="agregar">
         </div>
