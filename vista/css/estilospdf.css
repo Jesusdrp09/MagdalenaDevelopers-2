@@ -111,7 +111,7 @@ input, textarea{
 
 #fila-1{
     display: flex;
-    height: 5vw;
+    height: 6vw;
 }
 
 #fila-1 div{
@@ -132,6 +132,7 @@ input, textarea{
 
 #fila-2{
     display: flex;
+    height: 4rem;
     font-size: 18px;
 }
 
@@ -328,6 +329,8 @@ input, textarea{
     border-bottom: 1px solid black;
 }
 
-
+#apellidoInput, #nombreInput{
+    height: 2rem;
+}
 
 

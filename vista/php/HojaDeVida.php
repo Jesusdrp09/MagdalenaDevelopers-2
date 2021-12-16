@@ -44,7 +44,7 @@
                         <span>C.C</span><input type="radio" name="documento"  class="radio" id="ccinput">
                         <span>C.E</span><input type="radio" name="documento"  class="radio" id="ceinput">
                         <span>T.I</span><input type="radio" name="documento"  class="radio" id="tiinput">
-                        <input type="text" name="numero" class="inputT"  id="numeroDocumento">
+                        <label for="numeroDocumento" class="inputT"  id="numeroDocumento"></label>
                     </div>
                     <div id="fechaNacimiento">
                         <span class="tituloD">FECHA NACIMIENTO</span>
