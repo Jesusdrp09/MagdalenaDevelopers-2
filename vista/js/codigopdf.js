@@ -51,7 +51,7 @@ function putData(){
 
             let direccionCompleta = data.residencia.split(",");
             $("#inputDireccion").attr("value", direccionCompleta[0]);
-            $("#numeroDocumento").attr("value", data.documentoIdentidad);
+            $("#numeroDocumento").html(data.documentoIdentidad);
             $("#inputPais").attr("value", data.paisResidencia);
             $("#inputMunicipio").attr("value", data.ciudadResidencia);
             $("#inputCelular").attr("value", data.celular);
@@ -116,26 +116,26 @@ function putData(){
                 break;
             }
 
-            // html2pdf()
-            // .set({
-            //     margin: 0,
-            //     filename: 'documento.pdf',
-            //     image:{
-            //         type: 'jpeg',
-            //         quality: 0.98
-            //     },
-            //     html2canvas: {
-            //         scale: 3, 
-            //         letterRendering: true,
-            //     },
-            //     jsPDF: {
-            //         unit: 'in',
-            //         format: 'a3'
-            //     }
-            // })
-            // .from($elementoParaConvertir)
-            // .save()
-            // .catch(err => console.log(err))
+            html2pdf()
+            .set({
+                margin: 0,
+                filename: 'documento.pdf',
+                image:{
+                    type: 'jpeg',
+                    quality: 0.98
+                },
+                html2canvas: {
+                    scale: 3, 
+                    letterRendering: true,
+                },
+                jsPDF: {
+                    unit: 'in',
+                    format: 'a3'
+                }
+            })
+            .from($elementoParaConvertir)
+            .save()
+            .catch(err => console.log(err))
         }
     });
 
