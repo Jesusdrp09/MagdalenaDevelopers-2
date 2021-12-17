@@ -113,12 +113,14 @@ onAuthStateChanged(auth, (user) => {
     let btnPerfil = document.getElementById("labelPerfil");
     btnPerfil.setAttribute("style","display: block");
 
-    let opadmministrador = document.getElementById("opAdminID");
+    // let opadmministrador = document.getElementById("opAdminID");
+    let opadminnoticias = document.getElementById("adminNoticias");
     if(user.email == "admin@admin.co"){
-      console.log("es el admin");
-      opadmministrador.setAttribute("style","display: block");
+      // opadmministrador.setAttribute("style","display: block");
+      opadminnoticias.setAttribute("style","display: block");
     }else{
-      opadmministrador.setAttribute("style","display: none");
+      // opadmministrador.setAttribute("style","display: none");
+      opadminnoticias.setAttribute("style","display: none");
     }
     // ...
   } else {

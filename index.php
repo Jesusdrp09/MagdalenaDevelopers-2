@@ -150,7 +150,7 @@
             <h4>Noticias actualizadas para los desarrolladores</h4>
             <br>
             <div id="contenedorNoticias">
-                <div class="card">
+                <!-- <div class="card">
                     <img src="vista/img/habilidades-desarrollador-web.jpg" width="200px" height="150px">
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi deleniti tempore labore ipsam libero error architecto officia ratione, iusto voluptates incidunt minus magnam quibusdam optio enim odio. Nam, optio ipsum.</p>
                     <a href="#"><h5>Saber más...</h5></a>
@@ -169,7 +169,7 @@
                     <img src="vista/img/habilidades-desarrollador-web.jpg" width="200px" height="150px">
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi deleniti tempore labore ipsam libero error architecto officia ratione, iusto voluptates incidunt minus magnam quibusdam optio enim odio. Nam, optio ipsum.</p>
                     <a href="#"><h5>Saber más...</h5></a>
-                </div>
+                </div> -->
             </div>
             <input type="button" value="Ver Más" class="vermas"> 
         </div>

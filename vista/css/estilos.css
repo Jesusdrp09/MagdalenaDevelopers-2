@@ -428,6 +428,10 @@ hr{
   border-radius: 8px;
 }
 
+.tituloNoticia{
+  font-size: 1vw;
+}
+
 #elMundoHoySection p{
   text-align: justify;
   font-size: 8pt;

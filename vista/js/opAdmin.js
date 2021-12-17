@@ -1,7 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js";
-// import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-analytics.js";
-import { getDatabase, set, get, onValue, ref, child } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-database.js";
+import { getDatabase, set, get, onValue, ref, child, update } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-database.js";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup } from 'https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -26,14 +25,15 @@ const database = getDatabase(app);
 const dbRef = ref(database);
 
 function setDataUser(user, nombreC, lenguajesDBC, descripcionDBC, i){
-  set(child(dbRef, 'datosUsuarios/'+user.uid), {
-    nombreCompleto: nombreC,
-    lenguajes: lenguajesDBC,
-    descripcion : descripcionDBC,
-    uid: user.uid
-  }).then(() =>{
+  let leng = lenguajesDBC.replaceAll(" ","").split(",");
+  update(child(dbRef, 'datosUsuarios/'+user.uid),{
+      nombreCompleto: nombreC,
+      lenguajes: leng,
+      descripcion : descripcionDBC,
+      uid: user.uid
+    }).then(() => {
     $("#h2id"+i).text(nombreC);
-    $("#lenguajeid"+i).html("<b>Lenguajes: </b>"+lenguajesDBC);
+    $("#lenguajeid"+i).html("<b>Lenguajes: </b>"+leng);
     $("#descripcionid"+i).html("<b>Descripción: </b>"+descripcionDBC);
   });
 }

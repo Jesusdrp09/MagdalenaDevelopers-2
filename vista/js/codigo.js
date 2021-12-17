@@ -87,6 +87,32 @@ function obtenerInfoPorFiltros(leng, tipoProg, nivelIng){
     });
 }
 
+function obtenerNoticias(){
+  let data;
+  get(child(dbRef, 'datosNoticias/')).then((snapshot) => {
+    if (snapshot.exists()) {
+      snapshot.forEach((d) => {
+        data = d.val();
+        if(d.key != -1){
+          $("<div></div>", {"class": "card", "id":"card"+d.key}).appendTo("#contenedorNoticias");
+          $("<p></p>", {"class":"tituloNoticia", "id":"titulotag"+d.key}).appendTo("#card"+d.key);
+          $("#titulotag"+d.key).html(data.titulo);
+          $("<img>", {"src": data.photoURL, "width":"200px", "height":"150px"}).appendTo("#card"+d.key);
+          $("<p></p>", {"id":"ptag"+d.key}).appendTo("#card"+d.key);
+          $("#ptag"+d.key).html(data.descripcion);
+          $("<a></a>",{"href":data.urlNoticia, "id":"atag"+d.key}).appendTo("#card"+d.key);
+          $("<h5></h5>",{"id":"h5tag"+d.key}).appendTo("#atag"+d.key);
+          $("#h5tag"+d.key).html("Saber más...");
+        }
+      });
+    }else {
+      console.log("No data available");
+    }
+  }).catch((error) => {
+    console.error(error);
+  });
+}
+
 let logo = document.getElementById("logo");
 let iniciarSesion = document.getElementById("iniciar-sesion");
 const cambioContraDialog = document.getElementById("cambioContraDialog");
@@ -158,6 +184,7 @@ combo3.onchange = () =>{
 }
 
 obtenerInfoPorFiltros(combo1.value,combo2.value,combo3.value);
+obtenerNoticias();
 
 function filtrar(){
   $("#contenedorPerfiles").empty();

@@ -12,17 +12,20 @@
     <div id=" Adminitrador de noticias" class="NoticiasInfo">
         <h2 class="tituloInfo">Centro De Noticias</h2>
         <label for="Subir Imagen">Subir Imagen Noticia</label>
-        <input type="file" name="SubirImagen" id="SubirImagen">
+        <input type="file" name="SubirImagen" id="imgInput">
         <label for="Titulo Noticia">Titulo Noticia</label>
         <input type="text" id="Titulo" ><br>
         <label for="Descripcion Noticia">Descripcion Noticia:</label><br>
-        <textarea name="textarea" placeholder="Noticia..." rows="2" cols="80"></textarea><br><br>
+        <textarea name="textarea" placeholder="Noticia..." rows="2" cols="80" id="descripcionNoticia"></textarea><br><br>
         <label for="URL Noticia">URL Noticia</label>
         <input type="url" id="url" name="url">
         <br>
         
     </div>
     <button id="guardarCambios">Guardar cambios</button>
-    
+    <input type="button" id="btnVolver" value="VOLVER">
 </body>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script src="../js/adminNoticias.js"></script>
+<script type="module" src="../js/loadPicture.js"></script>
 </html>

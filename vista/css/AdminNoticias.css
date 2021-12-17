@@ -44,3 +44,12 @@ main h1, h2, label{
 textarea{
     padding: 0.2rem;
 }
+
+#btnVolver{
+    background-color: red;
+    color: white;
+    padding: .5rem;
+    border-radius: 0.3rem;
+    margin-right: 2rem;
+    font-weight: bolder;
+}
